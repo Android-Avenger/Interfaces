@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class SplitData {
 
-    public static void getData(String filePath , ParseLine pL) throws FileNotFoundException {
+    public static void getData(String filePath, ParseLine pL) throws FileNotFoundException {
 
         FileInputStream fileInputStream = new FileInputStream(filePath);
         Scanner scanner = new Scanner(fileInputStream);
@@ -26,8 +26,8 @@ public class SplitData {
                 ml.set(0, m.group(1));
             }
 
-            for (int i = 0 ; i < ml.size() ; i++ ){
-                if (ml.get(i).contains("\"")){
+            for (int i = 0; i < ml.size(); i++) {
+                if (ml.get(i).contains("\"")) {
                     ml.remove(i);
                 }
             }
@@ -39,7 +39,7 @@ public class SplitData {
                     "CNIC : " + ml.get(3)
             );
 
-            System.out.println("\n \n");
+            System.out.println("\n");
 
         }
     }
