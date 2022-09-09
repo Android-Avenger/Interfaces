@@ -18,40 +18,40 @@ public class TestCase {
 
     public static void camelToSnakeAndPascalCase(String text, NotifyCase cn) {
 
-        String sn = "";
+        String snake_case = "";
         char c = text.charAt(0);
-        sn = sn + Character.toLowerCase(c);
+        snake_case = snake_case + Character.toLowerCase(c);
 
         for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
             if (Character.isUpperCase(ch)) {
-                sn = sn + '_';
-                sn = sn + Character.toLowerCase(ch);
+                snake_case = snake_case + '_';
+                snake_case = snake_case + Character.toLowerCase(ch);
             } else {
-                sn = sn + ch;
+                snake_case = snake_case + ch;
             }
         }
         String pascalCase = text.substring(0, 1).toUpperCase() + text.substring(1);
-        cn.onCamelCaseFound(text, sn, pascalCase);
+        cn.onCamelCaseFound(text, snake_case, pascalCase);
     }
 
     public static void pascalToSnake_caseAndCamelCase(String text, NotifyCase cn) {
 
-        String sn = "";
+        String snake_case = "";
         char c = text.charAt(0);
-        sn = sn + Character.toLowerCase(c);
+        snake_case = snake_case + Character.toLowerCase(c);
 
         for (int i = 1; i < text.length(); i++) {
             char ch = text.charAt(i);
             if (Character.isUpperCase(ch)) {
-                sn = sn + "_";
-                sn = sn + Character.toLowerCase(ch);
+                snake_case = snake_case + "_";
+                snake_case = snake_case + Character.toLowerCase(ch);
             } else {
-                sn = sn + ch;
+                snake_case = snake_case + ch;
             }
         }
         String camelCase = text.substring(0, 1).toLowerCase() + text.substring(1);
-        cn.onPascalCaseFound(text, sn, camelCase);
+        cn.onPascalCaseFound(text, snake_case, camelCase);
     }
 
 

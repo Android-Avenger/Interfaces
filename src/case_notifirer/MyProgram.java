@@ -5,6 +5,6 @@ public class MyProgram {
 
         TestCase testCase = new TestCase();
         CaseLibrary caseLibrary = new CaseLibrary();
-        caseLibrary.runProgram(testCase, "snake_case");
+        caseLibrary.runProgram(testCase, "snake_ase" );
     }
 }
